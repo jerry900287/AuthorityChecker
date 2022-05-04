@@ -1,6 +1,6 @@
 # AuthorityChecker
 
-## User Interface Privilege Isolation (UAC)
+## User Interface Privilege Isolation (UIPI)
 使用者介面特權隔離（User Interface Privilege Isolation），是 Windows 7 通過 MIC 機制新引入的一種安全特性，用於攔截接收比自身程序 MIC 等級低的程序發來的訊息。UIPI 的目的是為了規範不同程序視窗之間的視窗訊息處理過程，預設情況下，高許可權程序不會接收到低許可權程序傳送的視窗訊息的，但是低許可權程序能夠接收到高許可權程序的視窗訊息。UIPI 的本質是系統檢查目標視窗和傳送方是否具有相同的 MIC 等級或者傳送方具有更高的 MIC 等級，如果符合上述條件，則允許訊息的傳遞，否則將訊息丟棄。
 因此，在 Windows 7 作業系統中執行的使用者程序，如果執行時具有不同的完整性等級，即具有不同的 MIC 等級，那麼相互間的通訊將會無法像 Windows XP 那樣正常進行。
 
